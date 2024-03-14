@@ -1,6 +1,6 @@
 
 function algIdade() {
-    let nome, idade;
+    let nome, dade;
 
     /*prompt:comando utilizado para solicitar informações*/
 
@@ -9,10 +9,10 @@ function algIdade() {
     //string= é uma cadeia de caracteres ou seja uma sequencia de texto podendo conter numeros,letras e caracteres especial
 
     //Number converte um valor para numero
-    idade = Number(prompt('Digite sua Idade'));
+    dade = Number(prompt('Digite sua Idade'));
 
 
-    alert('Olá ' + nome + ' você tem ' + idade + ' anos.');
+    alert('Olá ' + nome + ' você tem ' + dade + ' anos.');
 }
 
 //algIdade();
@@ -115,7 +115,7 @@ function caclVotar() {
 //caclVotar()
 
 function calcFrutas() {
-    let macaKg, morangoKg, total,totalDesc,qtdKg
+    let macaKg, morangoKg, total, totalDesc, qtdKg
 
     macaKg = Number(prompt('Quantas maças deseja comprar'))
 
@@ -123,30 +123,30 @@ function calcFrutas() {
     // ||= ou; 
     qtdKg = macaKg + morangoKg;
 
-    if(macaKg >5 || morangoKg >5){
+    if (macaKg > 5 || morangoKg > 5) {
         total = (macaKg * 1.5) + (morangoKg * 2.2);
-    }else{
+    } else {
         total = (macaKg * 1.8) + (morangoKg * 2.5);
     }
 
-    if( qtdKg >8 || total > 25){
+    if (qtdKg > 8 || total > 25) {
         total = total - (total * 0.1)
     }
-    alert('a quantidade de kg comprados foi de '+qtdKg+ 'e o valor total foi de '+total)
+    alert('a quantidade de kg comprados foi de ' + qtdKg + 'e o valor total foi de ' + total)
 }
 
-function calcMedia(){
+function calcMedia() {
     let media
 
     media = Number(prompt('Digite a média do aluno'))
 
-    if(media <5){
+    if (media < 5) {
         alert('Conceito D')
-    }else if(media >=5 && media <7){
+    } else if (media >= 5 && media < 7) {
         alert('Conceito C')
-    }else if(media >=7 && media <9){
+    } else if (media >= 7 && media < 9) {
         alert('Conceito B')
-    }else if(media >=9 && media <=10){
+    } else if (media >= 9 && media <= 10) {
         alert('Conceito A')
     }
 
@@ -154,75 +154,140 @@ function calcMedia(){
 
 //calcMedia()
 
-function calcIMC(){
-    let altura,peso,imc
+function calcIMC() {
+    let altura, peso, imc
 
     altura = Number(prompt('Digite a sua altura'))
     peso = Number(prompt('Digite o seu peso'))
 
-    imc = peso/(altura*altura)
+    imc = peso / (altura * altura)
 
-    if(imc <18.5){
+    if (imc < 18.5) {
         alert('Abaixo do Peso')
-    }else if(imc >=18.5 && imc <25){
+    } else if (imc >= 18.5 && imc < 25) {
         alert('Peso Normal')
-    }else if(imc >=25 && imc <30){
+    } else if (imc >= 25 && imc < 30) {
         alert('Acima do Peso')
-    }else if(imc >30){
+    } else if (imc > 30) {
         alert('Obeso')
     }
 }
 
 //calcIMC()
 
-function alCarros(){
-    let kmPercorridos, categorias, diarias,total;
+function alCarros() {
+    let kmPercorridos, categorias, diarias, total;
 
     kmPercorridos = Number(prompt('Digite quantos km foram percorridos'))
     diarias = Number(prompt('Digite quantos dias o carro foi alugado'))
     categorias = (prompt('Digite a categoria do carro'))
 
-    if(categorias == 'popular'){
-        if(kmPercorridos>100){
+    if (categorias == 'popular') {
+        if (kmPercorridos > 100) {
             total = kmPercorridos * 0.1
-        }else{
+        } else {
             total = kmPercorridos * 0.2
         }
 
         total += diarias * 90
-    }else if( categorias == 'luxo'){
-        if(kmPercorridos>200){
+    } else if (categorias == 'luxo') {
+        if (kmPercorridos > 200) {
             total = kmPercorridos * 0.25
-        }else{
+        } else {
             total = kmPercorridos * 0.3
         }
 
         total += diarias * 150
-    }else{
+    } else {
         alert('Digite a categoria correta')
     }
-    
-    alert('o total a ser pago será de '+total)
+
+    alert('o total a ser pago será de ' + total)
 }
 
 //alCarros()
 
-function prgSaudavel(){
-    let horas,pontos,dinheiro
+function prgSaudavel() {
+    let horas, pontos, dinheiro
 
     horas = Number(prompt('Digite quantas horas de atividade você teve no mês'))
     dinheiro = 0.05
 
     if (horas <= 10) {
         pontos = horas * 2
-    }else if(horas < 20){
+    } else if (horas < 20) {
         pontos = horas * 5
-    }else if (horas >=21) {
+    } else if (horas >= 21) {
         pontos = horas * 10
     }
     dinheiro = dinheiro * pontos
 
-    alert('Você tem '+pontos+' pontos e ganhará '+dinheiro+ ' de grana')
+    alert('Você tem ' + pontos + ' pontos e ganhará ' + dinheiro + ' de grana')
 }
 
 //prgSaudavel()
+
+function calcIdade2() {
+    let idade, somaIdade, contIdade
+
+    somaIdade = 0;
+
+    contIdade = 1;
+
+    while (contIdade <= 5) {
+        idade = Number(prompt('Digite a idade da ' +contIdade+ ' ° pessoa'));
+
+        somaIdade = somaIdade + idade
+
+        contIdade = contIdade + 1
+    }
+    
+    alert('A soma das idades é ' +somaIdade)
+}
+
+//calcIdade();
+
+function idade(){
+    let idades,maiorIdade,contPesoas;
+
+    maiorIdade = 0
+    contPesoas = 1
+
+    while(contPesoas <= 5){
+        idades = Number(prompt('Digite a ' +contPesoas+ '° idade'));
+        if(idades >=18){
+
+            maioridade = maioridade + 1
+            //maiorIdade++
+            //maioridade += 1
+        }
+        contPesoas ++
+    }
+
+    alert('A quantidade de pessoas maiores de idade é '+maiorIdade)
+
+}
+
+//idade()
+
+function menorIdade(){
+    let idade,menorIdade,contIdade
+
+    menorIdade = 0
+    contIdade = 1
+
+    idade = Number(prompt('Digite a '+contIdade+ ' ° idade'))
+    
+    menorIdade = idade
+    
+    while(contIdade <=4){
+        idade = Number(prompt('Digite a '+contIdade+ ' ° idade'))
+
+        if(idade < menorIdade){
+            menorIdade = idade
+        }
+        contIdade++
+
+    }
+    alert('A menor idade é '=menorIdade)
+}
